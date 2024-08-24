@@ -1,0 +1,19 @@
+@ExceptionHandling_Global_HostAddress = http://localhost:5055
+
+GET {{ExceptionHandling_Global_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{ExceptionHandling_Global_HostAddress}}/api/Stores
+Accept: application/json
+
+
+###
+GET {{ExceptionHandling_Global_HostAddress}}/api/foo
+Accept: application/json
+
+
+### Exception Error: ArgumentOutOfRangeException from MapGet()
+GET {{ExceptionHandling_Global_HostAddress}}/api/foo/0
+Accept: application/json
+
